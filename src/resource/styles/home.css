@@ -1,0 +1,107 @@
+VBox {
+    -fx-background-color: #FFF;
+    -fx-font-family: 'Segoe UI';
+}
+
+.title {
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-padding: 18px 20px 15px 20px;
+}
+
+.card-container {
+    /*-fx-pref-height: 130px;*/
+    /*-fx-min-height: 130px;*/
+    /*-fx-max-height: 130px;*/
+    -fx-padding: 0px 20px 15px 20px;
+    -fx-spacing: 27px;
+}
+
+.card {
+    -fx-pref-height: 130px;
+    -fx-min-height: 130px;
+    -fx-max-height: 130px;
+    -fx-pref-width: 235px;
+    -fx-cursor: hand;
+}
+
+.graph-label {
+    -fx-font-size: 34px;
+    -fx-padding: 0px 20px 15px 20px;
+}
+
+.graph {
+    -fx-padding: -10 20 0 20;
+}
+
+.chart-content {
+    -fx-font-size: 14px;
+}
+
+.axis-label {
+    -fx-font-size: 16px;
+}
+
+.chart-legend {
+    -fx-font-size: 16px;
+    -fx-background-color: transparent;
+    -fx-padding: 10px 20px 20px 20px;
+}
+
+.chart-legend-item-symbol {
+    -fx-background-radius: 0;
+}
+
+.chart-legend-item {
+    -fx-text-fill: #191970;
+}
+
+.default-color0.chart-bar {
+    -fx-bar-fill: #fd909f;
+}
+
+.default-color1.chart-bar {
+    -fx-bar-fill: #2cbe4e;
+}
+
+.active-loan {
+    -fx-background-color: #0366d6;
+}
+
+.active-loan > .card-image {
+    -fx-image: url("../images/loans/active-loan.png");
+}
+
+.expired-loan {
+    -fx-background-color: #cc423c;
+}
+
+.expired-loan > .card-image {
+    -fx-image: url("../images/loans/expired-loan.png");
+}
+
+.lend-loan {
+    -fx-background-color: #e39a30;
+}
+
+.lend-loan > .card-image {
+    -fx-image: url("../images/loans/lend-loan.png");
+}
+
+.paid-loan {
+    -fx-background-color: #28a745;
+}
+
+.paid-loan > .card-image {
+    -fx-image: url("../images/loans/payed-loan.png");
+}
+
+.card-number {
+    -fx-font-size: 46px;
+    -fx-text-fill: #EEE;
+}
+
+.card-text {
+    -fx-font-size: 21px;
+    -fx-text-fill: #EEE;
+}

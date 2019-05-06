@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.ReportController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <HBox prefHeight="18.0" prefWidth="1080.0" spacing="25.0">
+               <children>
+                  <ChoiceBox fx:id="type" prefWidth="150.0" />
+                  <ChoiceBox fx:id="status" prefWidth="150.0" />
+                  <DatePicker fx:id="startDate" />
+                  <DatePicker fx:id="endDate" />
+               </children>
+               <padding>
+                  <Insets bottom="25.0" top="25.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="timeReportTable" prefHeight="200.0" prefWidth="976.0">
+              <columns>
+                <TableColumn prefWidth="47.0" text="№" />
+                <TableColumn prefWidth="159.0" text="Гэрээны дугаар" />
+                  <TableColumn prefWidth="130.0" text="РД" />
+                  <TableColumn prefWidth="221.0" text="Нэр" />
+                  <TableColumn prefWidth="182.0" text="Дүн" />
+                  <TableColumn prefWidth="203.0" text="Огноо" />
+                  <TableColumn minWidth="0.0" prefWidth="85.0" text="Үйлдэл" />
+              </columns>
+            </TableView>
+            <ButtonBar>
+               <buttons>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="562.0" minWidth="10.0" prefWidth="545.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="646.0" minWidth="10.0" prefWidth="475.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="43.0" text="Нийт:" />
+                              <Label fx:id="amount" prefHeight="30.0" prefWidth="302.0" text="54651" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+               </buttons>
+            </ButtonBar>
+         </children>
+         <padding>
+            <Insets left="25.0" right="25.0" />
+         </padding>
+      </VBox>
+   </children>
+</StackPane>

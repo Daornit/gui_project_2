@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="650.0" prefWidth="1080.0" stylesheets="@../../resource/styles/create_loan.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.CreateLoanController">
+   <children>
+      <GridPane fx:id="add_picture" hgap="10.0" prefHeight="440.0" prefWidth="1080.0" style="-fx-background-color: #f6f8fa;" vgap="10.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="20.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" percentWidth="20.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="135.0" minHeight="10.0" prefHeight="135.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="tfRegister" maxHeight="30.0" prefHeight="30.0" promptText="Регистр" GridPane.rowIndex="2">
+               <font>
+                  <Font size="13.0" />
+               </font></TextField>
+            <TextField fx:id="tfLast_name" maxHeight="30.0" prefHeight="30.0" promptText="Овог" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tfFirst_name" maxHeight="30.0" prefHeight="30.0" prefWidth="187.0" promptText="Нэр" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="tfPhone" maxHeight="30.0" prefHeight="30.0" promptText="99999999" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="tfPhone_add" maxHeight="30.0" prefHeight="30.0" promptText="Нэмэлт дугаар" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="tfAddress" maxHeight="30.0" prefHeight="30.0" promptText="Гэрийн хаяг" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnSpan="3" GridPane.rowIndex="4">
+               <children>
+                  <ComboBox fx:id="cbCategory" focusTraversable="false" maxHeight="30.0" prefHeight="30.0" prefWidth="150.0" promptText="Ангилал" visibleRowCount="5" />
+                  <ComboBox fx:id="cbCategory" focusTraversable="false" maxHeight="30.0" prefHeight="30.0" prefWidth="162.0" promptText="Төрөл" />
+                  <TextField fx:id="description" alignment="TOP_LEFT" maxHeight="30.0" prefHeight="30.0" prefWidth="300.0" promptText="Тайлбар" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4">
+               <children>
+                  <TextField fx:id="tfGram" alignment="BOTTOM_LEFT" maxHeight="30.0" prefHeight="30.0" promptText="Грамм" />
+                  <TextField fx:id="tfPurity" maxHeight="30.0" prefHeight="30.0" promptText="Сорьц" />
+                  <TextField fx:id="tfQuantity" maxHeight="30.0" prefHeight="30.0" promptText="Ширхэг" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <Label text="Эхлэх өдөр: " GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Хоног: " GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Хүү: " GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <DatePicker fx:id="dpStart_date" editable="false" focusTraversable="false" maxHeight="30.0" prefHeight="30.0" prefWidth="500.0" GridPane.rowIndex="6" />
+            <ComboBox fx:id="cbDay" focusTraversable="false" maxHeight="30.0" prefHeight="30.0" prefWidth="500.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <children>
+                  <TextField fx:id="tfInterest_rate" alignment="BOTTOM_RIGHT" editable="false" focusTraversable="false" maxHeight="30.0" prefHeight="30.0" prefWidth="137.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+                  <Label alignment="CENTER" maxHeight="30.0" prefHeight="30.0" prefWidth="30.0" style="-fx-border-color: #d9d9db; -fx-border-radius: 2;" text="\%">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+
+                                                                     </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+               <children>
+                  <TextField fx:id="tfAmount" alignment="BOTTOM_RIGHT" maxHeight="30.0" prefHeight="30.0" prefWidth="101.0" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="30.0" prefHeight="30.0" prefWidth="30.0" style="-fx-border-color: #d9d9db; -fx-border-radius: 2;" text="₮" />
+               </children>
+            </HBox>
+            <Label text="Хүүний хэмжээ: " GridPane.columnIndex="4" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label text="Регистр: " textFill="#12130f" GridPane.rowIndex="1" />
+            <Label text="Овог: " textFill="#12130f" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="Нэр: " textFill="#12130f" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Гар утас: " textFill="#12130f" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ImageView fitHeight="49.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../../resource/images/camera.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Button fx:id="btnAdd_loan" maxHeight="30.0" mnemonicParsing="false" onAction="#isAdd_loan" prefHeight="30.0" prefWidth="133.0" style="-fx-background-color: #2fbf50;" text="Нэмэх" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+               <children>
+                  <TextField fx:id="tfInterest_amount" alignment="BOTTOM_RIGHT" editable="false" focusTraversable="false" maxHeight="30.0" prefHeight="30.0" prefWidth="101.0" HBox.hgrow="ALWAYS" />
+                  <Label alignment="CENTER" maxHeight="30.0" prefHeight="30.0" prefWidth="30.0" style="-fx-border-color: #d9d9db; -fx-border-radius: 2;" text="₮" />
+               </children>
+            </HBox>
+            <ImageView fx:id="picture_one" fitHeight="135.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7" GridPane.vgrow="ALWAYS">
+               <image>
+                  <Image url="@../../resource/images/noimage.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="picture_two" fitHeight="135.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true" translateX="-70.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <image>
+                  <Image url="@../../resource/images/noimage.png" />
+               </image>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ImageView>
+            <HBox fx:id="LoadId" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" styleClass="LoadId" GridPane.columnSpan="2">
+               <children>
+                  <Label text="Гэрээний Дугаар:" textFill="#12130f">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblLoanId">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </GridPane>
+      <TableView prefHeight="180.0" prefWidth="1055.0" style="-fx-background-color: #f6f8fa; -fx-base: #f6f8fa;">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Ангилал" />
+          <TableColumn prefWidth="75.0" text="Төрөл" />
+            <TableColumn prefWidth="75.0" text="Грамм" />
+            <TableColumn prefWidth="75.0" text="Сорьц" />
+            <TableColumn prefWidth="75.0" text="Ширхэг" />
+            <TableColumn prefWidth="75.0" text="Эхлэх өдөр" />
+            <TableColumn prefWidth="75.0" text="Дуусах өдөр" />
+            <TableColumn prefWidth="75.0" text="Зээлийн хэмжээ" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TableView>
+    <Button fx:id="btnConfirm" maxHeight="30.0" mnemonicParsing="false" onAction="#isConfirm" prefHeight="30.0" style="-fx-background-color: #2fbf50;" text="Гэрээ байгуулах" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <VBox.margin>
+            <Insets bottom="10.0" left="800.0" top="10.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

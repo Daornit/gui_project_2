@@ -1,0 +1,26 @@
+HBox, VBox {
+    -fx-background-color: #2E294E;
+}
+
+Label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #E7ECEF;
+    -fx-font-size: 16;
+}
+
+HBox:hover, .active {
+    -fx-background-color: #E7ECEF;
+    -fx-text-fill: #2E294E;
+}
+
+HBox:hover Label {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2E294E;
+}
+
+.active Label {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2E294E;
+}

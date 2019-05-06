@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<VBox prefHeight="630.0" prefWidth="1060.0" stylesheets="@../../resource/styles/home.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.HomeController">
+   <children>
+      <Label styleClass="title" text="Өнөөдрийн товч мэдээлэл" />
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="card-container">
+         <children>
+            <AnchorPane fx:id="conActiveLoan" onMouseClicked="#searchActiveLoan" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="104.0" styleClass="card-text" text="Идэвхитэй Зээл" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+                  <Label fx:id="lblActiveLoan" layoutX="58.0" layoutY="60.0" styleClass="card-number" text="3" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="27.0" />
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="77.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="card-image" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="card" />
+                  <String fx:value="active-loan" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane fx:id="conExpiredLoan" onMouseClicked="#searchExpiredLoan" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="104.0" styleClass="card-text" text="Хугацаа Хэтэрсэн Зээл" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+                  <Label fx:id="lblExpiredLoan" layoutX="58.0" layoutY="60.0" styleClass="card-number" text="3" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="27.0" />
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="77.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="card-image" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="card" />
+                  <String fx:value="expired-loan" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane fx:id="conLendLoan" onMouseClicked="#searchLendLoan" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="104.0" styleClass="card-text" text="Олгосон Зээл" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+                  <Label fx:id="lblLendLoan" layoutX="58.0" layoutY="60.0" styleClass="card-number" text="3" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="27.0" />
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="77.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="card-image" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="card" />
+                  <String fx:value="lend-loan" />
+               </styleClass>
+            </AnchorPane>
+            <AnchorPane fx:id="conPaidLoan" onMouseClicked="#searchPaidLoan" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="104.0" styleClass="card-text" text="Хаагдсан Зээл" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" />
+                  <Label fx:id="lblPaidLoan" layoutX="58.0" layoutY="60.0" styleClass="card-number" text="3" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="27.0" />
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="77.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" styleClass="card-image" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="15.0" />
+               </children>
+               <styleClass>
+                  <String fx:value="card" />
+                  <String fx:value="paid-loan" />
+               </styleClass>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Label prefWidth="1060.0" text="Зээл Олголт ба Хаалт">
+         <styleClass>
+            <String fx:value="graph-label" />
+            <String fx:value="title" />
+         </styleClass>
+      </Label>
+      <BarChart fx:id="bcGraph" barGap="5.0" prefWidth="1060.0" styleClass="graph">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="yAxis" minorTickCount="0" side="LEFT" tickLabelGap="5.0" tickUnit="1.0"/>
+        </yAxis>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </BarChart>
+   </children>
+</VBox>

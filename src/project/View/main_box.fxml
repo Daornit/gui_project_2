@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../resource/styles/main_box.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller.MainBoxController">
+   <children>
+      <AnchorPane prefHeight="70.0" styleClass="header">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="1205.0" layoutY="18.0" onMouseClicked="#onClickExit" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../../resource/images/camera.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <HBox prefHeight="650.0">
+         <children>
+            <VBox maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" spacing="10.0" stylesheets="@../../resource/styles/side_bar.css">
+               <children>
+                  <HBox fx:id="hbGoHome" alignment="CENTER" onMouseClicked="#goHome" prefHeight="50.0" prefWidth="200.0" styleClass="active">
+                     <children>
+                        <Label prefWidth="90.0" text="Үндэс">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="hbGoCreateLoan" alignment="CENTER" onMouseClicked="#goCreateLoan" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefWidth="90.0" text="Шинэ Зээл">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="hbGoSearch" alignment="CENTER" onMouseClicked="#goSearch" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefWidth="90.0" text="Хайх" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox fx:id="hbGoReport" alignment="CENTER" onMouseClicked="#goReport" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefWidth="90.0" text="Тайлан" textAlignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </VBox>
+            <BorderPane fx:id="bpContent" prefHeight="650.0" prefWidth="1080.0" styleClass="bpContent" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>
