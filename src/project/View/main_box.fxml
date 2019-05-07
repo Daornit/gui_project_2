@@ -31,7 +31,7 @@
                <children>
                   <HBox fx:id="hbGoHome" alignment="CENTER" onMouseClicked="#goHome" prefHeight="50.0" prefWidth="200.0" styleClass="active">
                      <children>
-                        <Label prefWidth="90.0" text="Үндэс">
+                        <Label prefWidth="120.0" text="Нүүр Хуудас">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -46,7 +46,7 @@
                   </HBox>
                   <HBox fx:id="hbGoCreateLoan" alignment="CENTER" onMouseClicked="#goCreateLoan" prefHeight="50.0" prefWidth="200.0">
                      <children>
-                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefWidth="90.0" text="Шинэ Зээл">
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefWidth="120.0" text="Шинэ Зээл">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -61,7 +61,7 @@
                   </HBox>
                   <HBox fx:id="hbGoSearch" alignment="CENTER" onMouseClicked="#goSearch" prefHeight="50.0" prefWidth="200.0">
                      <children>
-                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefWidth="90.0" text="Хайх" textAlignment="CENTER">
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefWidth="120.0" text="Хайх" textAlignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -76,7 +76,7 @@
                   </HBox>
                   <HBox fx:id="hbGoReport" alignment="CENTER" onMouseClicked="#goReport" prefHeight="50.0" prefWidth="200.0">
                      <children>
-                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefWidth="90.0" text="Тайлан" textAlignment="CENTER">
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefWidth="120.0" text="Тайлан" textAlignment="CENTER">
                            <font>
                               <Font size="16.0" />
                            </font>

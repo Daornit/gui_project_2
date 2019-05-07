@@ -102,6 +102,6 @@ VBox {
 }
 
 .card-text {
-    -fx-font-size: 21px;
+    -fx-font-size: 16px;
     -fx-text-fill: #EEE;
 }
