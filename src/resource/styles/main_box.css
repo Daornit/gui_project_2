@@ -1,7 +1,32 @@
+.root {
+    -fx-font-family: Arial;
+}
+
 .bpContent {
     -fx-background-color: #E7ECEF;
 }
 
 .header {
     -fx-background-color: #131B23;
+}
+
+.logo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bolder;
+    -fx-text-fill: #E7ECEF;
+    -fx-translate-x: -475px;
+}
+
+.time {
+    -fx-font-size: 14px;
+    -fx-text-fill: #E7ECEF;
+    -fx-translate-x: 480px;
+}
+
+.close {
+    -fx-translate-x: 490px;
+}
+
+.separator {
+    -fx-background-color: #E7ECEF;
 }

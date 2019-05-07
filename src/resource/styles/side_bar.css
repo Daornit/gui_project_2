@@ -5,7 +5,7 @@ HBox, VBox {
 Label {
     -fx-font-weight: bold;
     -fx-text-fill: #E7ECEF;
-    -fx-font-size: 16;
+    -fx-font-size: 14;
 }
 
 HBox:hover, .active {
@@ -14,13 +14,13 @@ HBox:hover, .active {
 }
 
 HBox:hover Label {
-    -fx-font-size: 16;
+    -fx-font-size: 14;
     -fx-font-weight: bold;
     -fx-text-fill: #2E294E;
 }
 
 .active Label {
-    -fx-font-size: 16;
+    -fx-font-size: 14;
     -fx-font-weight: bold;
     -fx-text-fill: #2E294E;
 }

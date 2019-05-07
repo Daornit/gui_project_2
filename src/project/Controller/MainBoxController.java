@@ -3,6 +3,7 @@ package project.Controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -32,6 +33,10 @@ public class MainBoxController {
     // For BorderPane container for dynamic content render
     @FXML
     private BorderPane bpContent;
+
+    // Date and time
+    @FXML
+    private Label lblTime;
 
     // Mouse clicks for change current active item on Side-Bar and Change dynamically content of BorderPane
     @FXML
@@ -72,5 +77,6 @@ public class MainBoxController {
         // When open select Home as active
         currentActive = this.hbGoHome;
         JavaFXUtil.loadUI(bpContent, loaderHome);
+        Platform.runLater(() -> MainBoxServices.setTimer(lblTime) );
     }
 }

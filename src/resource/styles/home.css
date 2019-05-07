@@ -1,12 +1,11 @@
 VBox {
-    -fx-background-color: #FFF;
-    -fx-font-family: 'Segoe UI';
+    -fx-background-color: #E7ECEF;
 }
 
 .title {
-    -fx-font-size: 42px;
+    -fx-font-size: 34px;
     -fx-font-weight: bold;
-    -fx-padding: 18px 20px 15px 20px;
+    -fx-padding: 10px 20px 15px 20px;
 }
 
 .card-container {
@@ -25,27 +24,37 @@ VBox {
     -fx-cursor: hand;
 }
 
+.card-number {
+    -fx-font-size: 32px;
+    -fx-text-fill: #EEE;
+}
+
+.card-text {
+    -fx-font-size: 16px;
+    -fx-text-fill: #EEE;
+}
+
 .graph-label {
-    -fx-font-size: 34px;
-    -fx-padding: 0px 20px 15px 20px;
+    -fx-font-size: 24px;
+    -fx-padding: 0 20px 15px 20px;
 }
 
 .graph {
-    -fx-padding: -10 20 0 20;
+    -fx-padding: 0 20px -10px 20px;
 }
 
 .chart-content {
-    -fx-font-size: 14px;
+    -fx-font-size: 12px;
 }
 
 .axis-label {
-    -fx-font-size: 16px;
+    -fx-font-size: 14px;
 }
 
 .chart-legend {
-    -fx-font-size: 16px;
+    -fx-font-size: 14px;
     -fx-background-color: transparent;
-    -fx-padding: 10px 20px 20px 20px;
+    -fx-padding: 0px 20px 20px 20px;
 }
 
 .chart-legend-item-symbol {
@@ -94,14 +103,4 @@ VBox {
 
 .paid-loan > .card-image {
     -fx-image: url("../images/loans/payed-loan.png");
-}
-
-.card-number {
-    -fx-font-size: 46px;
-    -fx-text-fill: #EEE;
-}
-
-.card-text {
-    -fx-font-size: 16px;
-    -fx-text-fill: #EEE;
 }
